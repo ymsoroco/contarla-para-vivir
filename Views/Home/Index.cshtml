@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="grid-3x3">
+
+    <a asp-controller="Cursos" asp-action="Index" class="card-link">
+        <div class="card">
+            <h3>Oratoria</h3>
+            <p>Cursos para hablar en público con claridad y propósito.</p>
+        </div>
+    </a>
+
+    <a asp-controller="Cursos" asp-action="Index" class="card-link">
+        <div class="card">
+            <h3>Talleres Literarios</h3>
+            <p>Espacios creativos para escribir, leer y compartir.</p>
+        </div>
+    </a>
+
+    <a asp-controller="Cursos" asp-action="Index" class="card-link">
+        <div class="card">
+            <h3>Mentorías</h3>
+            <p>Acompañamiento personalizado en tu proceso creativo.</p>
+        </div>
+    </a>
+
+    <a asp-controller="DosisLiterarias" asp-action="Index" class="card-link">
+        <div class="card">
+            <h3>Dosis Literarias</h3>
+            <p>Videos y textos breves para inspirarte todos los días.</p>
+        </div>
+    </a>
+
+    <div class="center-logo-container">
+    <img src="~/img/logo.png" alt="Logo Contarla para Vivir" class="logo-img" />
+    <div class="logo-text-horizontal">
+        <h1>Contarla<br />Para<br />Vivir</h1>
+    </div>
+</div>
+
+
+    <a asp-controller="Cursos" asp-action="Index" class="card-link">
+        <div class="card">
+            <h3>Empresarte</h3>
+            <p>Storytelling y Comunicación efectiva para empresas y marcas.</p>
+        </div>
+    </a>
+
+    <a asp-controller="Home" asp-action="Foro" class="card-link">
+        <div class="card">
+            <h3>Foro</h3>
+            <p>Compartí experiencias, trabajos y consejos.</p>
+        </div>
+    </a>
+
+    <a asp-controller="Home" asp-action="Calendario" class="card-link">
+        <div class="card">
+            <h3>Calendario</h3>
+            <p>Fechas de actividades, eventos y talleres.</p>
+        </div>
+    </a>
+
+    <a asp-controller="Reviews" asp-action="Index" class="card-link">
+    <div class="card">
+        <h3>Reviews</h3>
+        <p>Opiniones de estudiantes que completaron nuestros cursos.</p>
+    </div>
+</a>
+
+
+</div>
+
+
+@model List<Contarla_Para_Vivir_PNT.Models.Curso>
+
+<h2>Seminario Contarla para vivir – próxima inscripción septiembre 2025</h2>

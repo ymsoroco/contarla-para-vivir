@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Contarla_Para_Vivir_PNT</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Tipografías cuadradas -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Contarla_Para_Vivir_PNT.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="navbar-brand d-flex align-items-center gap-2">
+                    
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 top-menu d-flex align-items-center">
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home"
+                                asp-action="Index">Inicio</a></li>
+                        <li class="separator">|</li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Cursos"
+                                asp-action="Index">Cursos</a></li>
+                        <li class="separator">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="DosisLiterarias"
+                                asp-action="Index">Dosis Literarias</a>
+                       </li>
+                        <li class="nav-item">
+                        <li class="separator">|</li>
+                            <a class="nav-link text-dark" asp-controller="Reviews" asp-action="Index">Reviews</a>
+                        </li>
+                        <li class="separator">|</li>
+                       
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home"
+                                asp-action="Foro">Foro</a></li>
+                        <li class="separator">|</li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home"
+                                asp-action="Calendario">Calendario</a></li>
+                        <li class="separator">|</li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home"
+                                asp-action="QuienesSomos">Quiénes somos</a></li>
+                        <li class="separator">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Contactos"
+                               asp-action="Crear">Formulario de Contacto</a>
+                        <li class="separator">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Inscripciones" asp-action="Crear">Inscripción</a>
+                        </li>
+                        <span class="mx-2">|</span>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Usuarios" asp-action="SignUp">Registro</a>
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+
+
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-content">
+            <!-- Columna 1: Logo + texto -->
+            <div class="footer-col footer-brand-row">
+                <img src="~/img/logo.png" alt="Logo" class="footer-logo" />
+                <div class="footer-text-block">
+                    <h4>Contarla para Vivir</h4>
+                    <p class="footer-description">
+                        Enseñamos a contar mejor nuestras historias a través de la palabra hablada y escrita.
+                        Ofrecemos cursos, mentorías y espacios de inspiración para comunicar con claridad, emoción y
+                        propósito.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna 2: Enlaces -->
+            <div class="footer-col">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Mentorías</a></li>
+                    <li><a asp-controller="Cursos" asp-action="Index">Cursos</a></li>
+                    <li><a href="#">Material gratuito</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Contacto -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> contacto@contarla.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Argentina</li>
+                    <li><i class="fa-solid fa-clock"></i> Lun a Vie de 9 a 18 hs</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        elements.forEach(el => observer.observe(el));
+    });
+</script>
+    
+
+</body>
+
+</html>

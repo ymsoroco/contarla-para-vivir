@@ -1,0 +1,23 @@
+﻿@model List<Contarla_Para_Vivir_PNT.Models.Inscripcion>
+
+<h2>Listado de inscriptos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Curso</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ins in Model)
+        {
+            <tr>
+                <td>@ins.Nombre</td>
+                <td>@ins.Email</td>
+                <td>@ins.Curso?.Titulo</td>
+            </tr>
+        }
+    </tbody>
+</table>

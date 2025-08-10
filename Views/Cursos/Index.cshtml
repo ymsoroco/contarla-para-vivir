@@ -1,0 +1,21 @@
+@model List<Contarla_Para_Vivir_PNT.Models.Curso>
+
+@{
+    ViewData["Title"] = "Cursos disponibles";
+}
+
+<h2>Cursos disponibles</h2>
+
+<div class="row">
+    @foreach (var curso in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm p-3 rounded">
+                <h4>@curso.Titulo</h4>
+                <p>@curso.Descripcion</p>
+                <p><strong>Nivel:</strong> @curso.Nivel</p>
+                <p><strong>Modalidad:</strong> @curso.Modalidad</p>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,35 @@
+﻿@model Contarla_Para_Vivir_PNT.Models.Contacto
+
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<h2>Formulario de Contacto</h2>
+
+<form asp-action="Crear" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Mensaje</label>
+        <textarea asp-for="Mensaje" class="form-control"></textarea>
+        <span asp-validation-for="Mensaje" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

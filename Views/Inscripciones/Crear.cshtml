@@ -1,0 +1,37 @@
+﻿@model Contarla_Para_Vivir_PNT.Models.Inscripcion
+
+@{
+    ViewData["Title"] = "Inscripción";
+}
+
+<h2>Formulario de inscripción</h2>
+
+<form asp-action="Crear" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Curso</label>
+        <select asp-for="CursoId" asp-items="@(ViewData["Cursos"] as SelectList)" class="form-control">
+            <option value="">Seleccione un curso</option>
+        </select>
+        <span asp-validation-for="CursoId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Inscribirme</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
